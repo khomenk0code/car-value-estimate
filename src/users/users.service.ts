@@ -16,6 +16,8 @@ export class UsersService {
   }
 
   findOneById(id: number) {
+    if (!id) return null;
+
     return this.userRepository.findOneBy({ id });
   }
 
